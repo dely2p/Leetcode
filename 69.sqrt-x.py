@@ -7,16 +7,13 @@
 # @lc code=start
 class Solution:
     def mySqrt(self, x: int) -> int:
-        i = 1
+        v = 1
+        result = 0
         while True:
-            result = i * i
-            if result > x:
-                i = i-1
+            if v * v > x:
+                result = v - 1
                 break
-            elif result == x:
-                break
-            i = i+1
-
-        return i
+            v = v + 1
+        return result
 # @lc code=end
 
